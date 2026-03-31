@@ -196,11 +196,14 @@ body > *{
 
 .sponsor-grid{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:50px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap:30px;
+
+    width:100%;
     max-width:700px;
     margin:60px auto;
 }
+
 
 /* item */
 .sponsor-item{
@@ -209,12 +212,14 @@ body > *{
     align-items:center;
     justify-content:center;
     gap:12px;
-    padding:20px;
+
+    padding:15px;
 }
 
 /* logos */
 .sponsor-item img{
-    width:110px;
+    width:100%;
+    max-width:120px;   /* prevents overflow */
     height:auto;
     object-fit:contain;
 }
@@ -224,6 +229,19 @@ body > *{
     font-size:0.9rem;
     letter-spacing:1px;
     color:#ccc;
+}
+@media(max-width:480px){
+    .sponsor-grid{
+        gap:20px;
+    }
+}
+
+.sponsor-item{
+    transition: transform 0.3s ease;
+}
+
+.sponsor-item:hover{
+    transform: scale(1.05);
 }
 
 /* remove hover effects */
