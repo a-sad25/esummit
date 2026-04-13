@@ -599,18 +599,20 @@ section{
 /* ================= CAROUSEL ================= */
 
 .carousel-container{
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .carousel-wrapper{
-overflow:hidden;
-width:90%;
+    overflow: hidden;
+    width: 90%;
 }
-.carousel{
-    display:flex;
-    gap:20px;
+
+/* arrows sit properly */
+.arrow{
+    flex-shrink: 0;
 }
 
 /* WobbleLab special glow */
